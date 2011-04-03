@@ -1,12 +1,11 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: Kill-Windows
+COPYRIGHT: MIT-License (http://www.opensource.org/licenses/mit-license.php)
+VERSION or DATE: v1.0 (Mar 2011)
+HOW TO START THIS PROJECT: Click "Run"
+AUTHORS: Florian Kirchner, Florian Nitschmann
+USER INSTRUCTIONS: 
+
+- Movement: Arrow-Keys
+
+- Shoot: Space-Key
