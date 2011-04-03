@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Level()
+comment1.params=num
+comment1.target=void\ setLevel(int)
+numComments=2

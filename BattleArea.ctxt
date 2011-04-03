@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=speed
+comment0.target=void\ moveRight(int)
+comment0.text=\r\n\ Bewegung\ nach\ vorn\r\n
+comment1.params=speed
+comment1.target=void\ moveLeft(int)
+comment1.text=\r\n\ Bewegung\ zur\u00FCck\r\n
+comment2.params=speed
+comment2.target=void\ moveUp(int)
+comment2.text=\r\n\ Bewegung\ nach\ Oben\r\n
+comment3.params=speed
+comment3.target=void\ moveDown(int)
+comment3.text=\r\n\ Bewegung\ nach\ Unten\r\n
+comment4.params=
+comment4.target=boolean\ atEdge()
+comment4.text=\r\n\ Am\ Rand\ der\ Welt...\r\n
+comment5.params=obj
+comment5.target=void\ remove(greenfoot.Actor)
+comment5.text=\r\n\ Zum\ Entfernen\ der\ Objekte\r\n
+comment6.params=cls
+comment6.target=boolean\ isCollided(java.lang.Class)
+comment6.text=\r\n\ Im\ Fall\ einer\ Kollision\r\n
+numComments=7
