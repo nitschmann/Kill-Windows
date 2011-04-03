@@ -1,10 +1,8 @@
 #BlueJ class context
 comment0.params=score
 comment0.target=Virus(Score)
-comment0.text=\r\n\ Der\ Score\r\n
 comment1.params=
 comment1.target=void\ move()
-comment1.text=\r\n\ Bewegung\r\n
 comment2.params=
 comment2.target=void\ act()
 numComments=3

@@ -1,39 +1,33 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Score here.
+ * Score 
  * 
- * @author Florian Kirchner
+ * @author Florian Kirchner, Florian Nitschmann
  * @version 1.0
  */
 public class Score extends BattleArea
 {
     
-    /**
-     * Allgemeines
-     */
+    //counter for the current score
     private int counter = 0;
+    //score the reach the next level
     private int maxScore = 1;
+    //the number of the current background image (world)
     private int currentBg;
+    //variable for Level.class
     private Level levelCounter;
-    
+    //current level
     public int level = 1;
-    //Level rank;
-    //private GreenfootImage levelImage;
     
-    
-    /**
-     * Act
-     */
+    //act method
     public void act () {
+        if(counter < 0) {
+            counter = 0;    
+        }
         checkWin();
     }
-    
-    
-    /**
-     * Score
-     */
-    
+    //score constructor (opens a new score)
     public Score(int number, Level level) {
         levelCounter = level;
         String score = "Punkte: ";
@@ -44,10 +38,12 @@ public class Score extends BattleArea
         img.drawString(score, 2, 20);
         setImage(img);
     }
+    //update method (update the score count)
     public void update(int num) {
         counter += num;
         setImage(counter);   
     }
+    //setImage method (sets a new 'image' [label on world] for the score)
     public void setImage(int number) {
         String score = "Punkte: ";
         score += number;
@@ -55,18 +51,14 @@ public class Score extends BattleArea
         img.clear();
         img.drawString(score, 2, 20);
     }
-    
+    //method checkWin (called in act() an checks if maxScore is reached)
     public void checkWin() {
-        //check that score can never be under 0 (null)
-        if (counter < 0) {
-            counter = 0;    
-        }
-        
-        else if(counter == maxScore) {
-            
-            int newMaxScore = maxScore+5;
+        if(counter == maxScore) {
+            //create a new maxScore
+            int newMaxScore = maxScore+5; //can be changed 
             maxScore = newMaxScore;
-      
+            
+            //get a number for a random background image in another level
             int newBg = Greenfoot.getRandomNumber(4) + 1;
             
             if(newBg == currentBg) {
@@ -90,13 +82,14 @@ public class Score extends BattleArea
                     currentBg = 4;
                 }    
             }
-            
+            //set a new level
             int newLevel = level+1;
             level = newLevel;
             
             levelCounter.setLevel(newLevel);
             
         }
+        //called a the begin of the game
         else if(counter != maxScore && level == 1) {
             currentBg = 1;
             levelCounter.setLevel(1);

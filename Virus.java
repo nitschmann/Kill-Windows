@@ -1,23 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Virus here.
+ * Virus
  * 
  * @author Florian Nitschmann
- * @version 1
+ * @version 1.0
  */
 public class Virus  extends BattleArea
 {
-    /**
-     * Allgemeines
-     */
+    
     GreenfootImage virus;
+    //initialize variables for speed and counter (Score.class)
     int speed;
     Score counter;
-
-    /**
-     * Der Score
-     */
+    //constructor Virus
     public Virus(Score score) {
         counter = score;
         virus = getImage();
@@ -25,11 +21,7 @@ public class Virus  extends BattleArea
         int level = counter.level;
         speed = level+2;
     }
-    
-    
-    /**
-     * Bewegung
-     */
+    //method move (checks where virus is and starts actions)
     private void move () {
         if (atEdge()) {
         remove(this);
@@ -45,8 +37,7 @@ public class Virus  extends BattleArea
             moveLeft(speed);
         }
     }
-    
-    
+    //method act    
     public void act() 
     {
         move();

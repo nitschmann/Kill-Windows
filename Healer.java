@@ -1,33 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Healer here.
+ * Healer
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Florian Kirchner, Florian Nitschmann 
+ * @version 1.0
  */
 public class Healer  extends BattleArea
 {
-    /**
-     * Allgemeines
-     */
+    
     private GreenfootImage healer;
     private BattleArea area;
+    //speed
     private int speed = 20;
-    
-    
-    /**
-     * Heiler Klasse
-     */
-    public Healer () {
+    //constructor Healer
+    public Healer() {
         healer = getImage();
         healer.scale(15, 15);
     }
-    
-    
-    /**
-     * Bewegung
-     */
+    //method move
     private void move() {
         if (atEdge()) {
             remove(this);
@@ -36,11 +27,7 @@ public class Healer  extends BattleArea
             moveRight(speed);
         }
     }
-    
-    
-    /**
-     * Act
-     */
+    //method act
     public void act() {
         move();
     }

@@ -1,13 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Level here.
+ * Level
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Florian Nitschmann 
+ * @version 1.0
  */
 public class Level  extends Actor
 {
+    //constructor level (creates a image for level count)
     public Level() {
         String text = "Level: 1";
         GreenfootImage img = new GreenfootImage(text.length()*20, 30);
@@ -16,7 +17,7 @@ public class Level  extends Actor
         img.drawString(text, 2, 20);
         setImage(img);
     }
-    
+    //method setLevel (sets a new level)
     public void setLevel(int num) {
         String text = "Level: ";
         text += num;
